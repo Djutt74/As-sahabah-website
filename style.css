@@ -70,6 +70,8 @@ header {
 .nav-links li a {
     font-size: 1.3rem;
     text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 #mobile-menu-icon, #close-menu-icon {
@@ -86,15 +88,21 @@ header {
 
 #main-container{
     background-color: #0C1F4B;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
     align-items: center;
     height: auto;
     margin-bottom: 20px;
 }
 
+#main-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+}
 .prayer-container, #services-container, #vision-container, #donation-container, #about-container{
     width: 75%;
     padding: 25px;
@@ -107,12 +115,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 5px;
-    height: 300px;
-    position: absolute;
+    gap: 5px;  
     background-color: #0f214b;
     color: #ffffff;
-    top: 50%;
 }
 
 
@@ -148,7 +153,6 @@ header {
 #services-container{
     background-color:#d1e3f7;
     height: 100%;
-    margin-top: 170px;
 }
 
 #service-list{
@@ -330,7 +334,51 @@ footer {
   padding: 1rem;
   background: #0d3b26;
   color: #fff;
+  width: 100%;
 }
+
+#popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #576688;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+}
+#popUp-inner{
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 85%;
+    background-color: #c1cce4;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    overflow: auto;
+    scrollbar-width: none;        
+  -ms-overflow-style: none;
+    padding: 25px;
+}
+#popUp-inner section {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+#popup-close-btn{
+    font-size: 2rem;
+    text-align: right;
+    cursor: pointer;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -367,15 +415,10 @@ footer {
 
   .prayer-container{
     flex-direction: column;
-    height: 450px;
   }
 
   #prayer-heading, #prayer-table-container{
     width: 100%;
-  }
-
-  #services-container{
-    margin-top: 320px;
   }
   #donation-container-inner, #about-container-inner{
     flex-direction: column;

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // get prayer time
     const prayerTable = document.getElementById('prayer-table-container')
     let iqamahtime = {};
+    let formattedSunset;
 
 
     function getiqamahtime(){
@@ -29,8 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 prayerTableContent = '<table><tbody>';
 
                 Object.keys(iqamahtime).forEach(function(key){
-
-                    prayerTableContent +=`<tr><td class='left'>${key}</td><td class='right'>${iqamahtime[key]}</td></tr>`;
+                    if(key == 'Maghrib'){
+                        prayerTableContent +=`<tr><td class='left'>${key}</td><td class='right'>${formattedSunset}</td></tr>`;
+                    }else{
+                        prayerTableContent +=`<tr><td class='left'>${key}</td><td class='right'>${iqamahtime[key]}</td></tr>`;
+                    }
                 });
                 prayerTableContent += '</tbody></table>';
 
@@ -38,7 +42,23 @@ document.addEventListener('DOMContentLoaded', function () {
               
         });
     }; 
-    
+
+
+    function maghribTime(){
+        const url = `https://api.sunrise-sunset.org/json?lat=35.9&lng=-79.9&formatted=0`;
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+        const sunsetTime = data.results.sunset;
+        formattedSunset = new Date(sunsetTime).toLocaleTimeString();
+        formattedSunset = formattedSunset.slice(0,4) + formattedSunset.slice(-3);
+        iqamahtime.Maghrib = formattedSunset
+        
+        })
+        .catch(error => console.log('Error fetching data:', error));
+    }
+
+    maghribTime();
     getiqamahtime();
 
 
@@ -63,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const menuDiv = document.getElementsByClassName('nav-links');
     const menuBtn = document.getElementById('mobile-menu-icon');
-    const closeMenuBtn = document.getElementById('close-menu-icon');
+
     menuBtn.addEventListener('click', (e)=>{
         if(e.target.textContent == '\u2630'){
             menuDiv[0].style.display = 'flex';
@@ -74,4 +94,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    function updateBoxStyle() {
+        const width = window.innerWidth;
+
+        if (width > 768 && menuDiv[0].style.display == 'none') {
+            menuDiv[0].style.display = 'flex';
+        }
+        if (width < 768 && menuDiv[0].style.display == 'flex') {
+            menuDiv[0].style.display = 'none';
+            if(menuBtn.textContent == '\u00D7'){
+                menuBtn.textContent = '\u2630'
+            }
+        }
+    }
+
+    window.addEventListener("load", updateBoxStyle);
+
+    window.addEventListener("resize", updateBoxStyle);
+
+
+    //PopUp
+    const popUpBtn = document.getElementById('learn-more-btn');
+    const popUpDiv = document.getElementById('popUp');
+    const popUpCloseBtn =  document.getElementById('popup-close-btn');
+    popUpBtn.addEventListener('click', ()=>{
+        popUpDiv.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    })
+    popUpCloseBtn.addEventListener('click', ()=>{
+        popUpDiv.style.display = 'none';
+        document.body.style.overflow = '';
+    })
+
+
+    
 });
