@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fefefe;
+    color: #333;
+    background-color: #0C1F4B;
+ 
+}
+
+header {
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 75vh;
+    background-image: url('images/dashboard.png');
+    background-position:bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#Welcom-paragraph{
+    text-align: center;
+    margin-top: 25px;
+}
+#Welcom-paragraph{
+    font-family: cursive;
+    color: #1a1a1a;
+}
+#nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-self: left;
+    align-items: center;
+}
+
+#nav-menu a:hover{
+    border-bottom: 1px solid #0C1F4B;
+    transition: ease;
+}
+
+.logo {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    float: left;
+    margin-right: 45px;
+    margin-left: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1.5rem;
+    background: none;         
+    color: inherit;         
+    position: static;
+    width: auto;    
+}
+
+.nav-links li a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#mobile-menu-icon, #close-menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+#logo-and-menu{
+    display: flex;
+    flex-direction: row;
+}
+
+#main-container{
+    background-color: #0C1F4B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.prayer-container, #services-container, #vision-container, #donation-container, #about-container{
+    width: 75%;
+    padding: 25px;
+    box-shadow: 0px 0px 3px 0.05px black;
+    border-radius: 5px;
+}
+
+
+.prayer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    height: 300px;
+    position: absolute;
+    background-color: #0f214b;
+    color: #ffffff;
+    top: 50%;
+}
+
+
+#prayer-heading{
+    width: 40%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#prayer-table-container{
+    width: 55%;
+    color: #ffffff;
+    pad: 5px;
+    align-self: right;
+}
+#prayer-table-container table{
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    border-collapse: collapse;
+}
+#prayer-table-container td{
+    padding: 10px;
+    border-top: 1px solid #ffffff;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+
+
+#services-container{
+    background-color:#d1e3f7;
+    height: 100%;
+    margin-top: 170px;
+}
+
+#service-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.service-card{
+    background-color:#c5d3e21f;
+    box-shadow: 0px 0px 1px 0.03px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    gap: 5px;
+    padding: 5px;
+    width: 150px;
+}
+.service-card h3, p{
+    text-align: center;
+}
+.service-card h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.service-card img{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+
+#vision-container{
+    background-color: #0f214b;
+    color: #ffffff;
+}
+
+#donation-container{
+    background-color:#d1e3f7;
+    
+}
+
+#donation-container-inner{
+    display: flex;
+    flex-direction: row;
+}
+
+#donation-hadith{
+    text-align: left;
+    width: 35%;
+    padding: 5px;
+    border-right: 5px solid #0f214b;
+
+}
+
+#zelle-info{
+    width: 55%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+#zelle-img-div{
+    height: 100px;
+    align-self: center;
+}
+
+#zelle-info img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+#zelle-info ul{
+    align-self: center;
+    margin-left: 10px;
+    padding: 3px;
+    list-style:circle;
+}
+
+#about-container{
+    background-color: #1a1a1ab6;
+    color: #ffffff;
+}
+
+#about-container-inner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    
+}
+#imam-heading, #contact{
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0.03px #fff;
+    width: 45%;
+    height: 175px;
+    padding: 10px;
+}
+
+#imam-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imam-heading img{
+    height: 75px;
+    border-radius: 5%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #576688;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.contact-item a {
+    color: #025dee;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background: #eec055;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background: #f8f8f8;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  flex: 1 1 250px;
+  margin: 1rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0d3b26;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0f214b;
+    color: #ffffff;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 200px;
+  }
+  #logo-and-menu{
+    justify-content: space-between;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    text-align: center;
+    color: #fff;
+  }
+  .nav-links li a{
+    color: #fff;
+  }
+  .nav-links li:hover{
+    background-color: #e22828;
+  }
+
+  #mobile-menu-icon {
+    display: block;
+  }
+
+  .prayer-container{
+    flex-direction: column;
+    height: 450px;
+  }
+
+  #prayer-heading, #prayer-table-container{
+    width: 100%;
+  }
+
+  #services-container{
+    margin-top: 320px;
+  }
+  #donation-container-inner, #about-container-inner{
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-container-inner div{
+    height: auto;
+    width: 100%;
+  }
+  #donation-hadith{
+    width: 100%;
+    border-right: none;
+    border-bottom: 5px solid #0f214b;
+  }
+  .hero {
+    height: 40vh;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+}

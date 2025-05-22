@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Masjid As-Sahaba</title>
+  <script type="module" src="js.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+        <div id="logo-and-menu">
+            <h1 class="logo">As-Sahaba</h1>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a onclick="ScrollTo('services-container')" href="#">Services</a></li>
+                    <li><a onclick="ScrollTo('about-container')" href="#">Contact</a></li>
+                </ul>
+                <div id="mobile-menu-icon">&#9776;</div>
+            </nav>
+        </div>
+        <div id="Welcom-paragraph">
+            <h1>Welcom to Our Masjid</h1>
+            <p>Experience peace, prayer, and community at the heart of our Islamic center.</p>
+            <button class="btn">Learn More!</button>
+        </div>
+    </div>
+  </header>
+
+  <main id="main-container">
+    
+    
+    <div class="prayer-container">
+        <div id="prayer-heading">
+            <h1 style="text-align: center;">Prayer Times</h1>
+            <p>Below is the prayer time table, reminding us of the importance of praying on time to stay connected with our faith</p>
+        </div>
+        <div id="prayer-table-container">
+
+        </div>   
+    </div>
+
+
+    <div id="services-container">
+        
+    </div>
+
+
+
+    <div id="vision-container">
+        <h1>Our Vision</h1>
+        <p style="text-align: left;">At As-Sahaba Masjid, our vision is to create a welcoming and vibrant space where the community can connect spiritually, grow in knowledge, and live in harmony. We are dedicated to fostering a deep understanding of Islam through educational programs, daily prayers, and community outreach, while embracing individuals from all walks of life. Our goal is to build a place of peace, unity, and service to Allah and humanity, inspiring positive change and spiritual growth for all.</p>
+
+
+    </div>
+
+    <div id="donation-container">
+        <h1 style="text-align: center; margin-bottom:5px; color: #1E2A5A; padding: 5px; ">Help us Grow</h1>
+        <div id="donation-container-inner">
+            <div id="donation-hadith">
+                <p>The Messenger of Allah(Peace be Upon Him) said: "Whoever builds a mosque for the sake of Allah, like a sparrow's nest for Allah or even smaller, Allah will build for him a house in Paradise."</p>
+            </div>
+            <div id="zelle-info">
+                <div id="zelle-img-div">
+                    <img src="images/zelleqr.png">
+                </div>
+
+                
+                <ul>
+                    <li>email</li>
+                    <li>phone</li>
+                    <li>qr</li>
+                </ul>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="about-container">
+
+        <div id="about-container-inner">
+            <div id="imam-heading">
+                <h3 style="text-align: center; margin-bottom:3px;">Imam</h3>
+                <div id="imam-info">
+                    <img src="images/imam.png" alt="imam-Icon">
+                    <h2 style="text-align: center;">Mufti Amjad Hameed</h2>
+                </div>
+
+            </div>
+            <div id="contact">
+                <h3 style="text-align: center; margin-bottom:3px;">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><p>123 Main Street, City, Country</p></span>
+                    </div>
+                    <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:example@example.com">example@example.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+1 234 567 890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+  </main>
+
+
+ 
+
+
+  
+
+  <footer>
+    <p>&copy; 2025 Masjid As-Sahaba. All rights reserved.</p>
+  </footer>
+
+  <script>
+       //Scroll function
+    function ScrollTo(divName){
+        const scrollposition = document.getElementById(divName);
+        if(scrollposition){
+            scrollposition.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+  </script>
+</body>
+</html>
