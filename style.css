@@ -453,7 +453,7 @@ footer {
   #prayer-heading, #prayer-table-container{
     width: 100%;
   }
-  #donation-container-inner, #about-container-inner{
+  #donation-container-inner, #about-container-inner, #zelle-info{
     flex-direction: column;
     align-items: center;
   }

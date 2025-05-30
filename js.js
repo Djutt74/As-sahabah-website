@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     maghribTime();
-    setTimeout(getiqamahtime,500)
+    setTimeout(getiqamahtime,1000)
 
 
 
