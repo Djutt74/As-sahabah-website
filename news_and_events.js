@@ -1,0 +1,57 @@
+export const news_and_events = [
+    {
+        'id': 1,
+        'type': 'news',
+        'image': 'images/news_and_events/summerClasses.jpg',
+        'title': 'Summer Islamic Classes for Kids – Starting This June!',
+        'date': '3/25/2025',
+        'description': 'We are excited to announce that our mosque will be offering special summer classes for children beginning in June! These sessions will focus on Quran reading, basic Islamic teachings, duas, manners, and fun educational activities that help kids connect with their faith in a meaningful and enjoyable way. Classes will be held on weekdays, and are open to children of all ages. Whether your child is just beginning their journey with the Quran or looking to build a deeper understanding of Islam, these sessions will provide a nurturing and engaging environment for spiritual growth.',
+        'time': '6:30 PM - 7:30 PM',
+        'location': 'Main Prayer Hall, Al-Noor Mosque',
+    },
+    {
+        'id': 2,
+        'type': 'event',
+        'icon': 'images/news_and_events/prayericon.png',
+        'title': 'Maryland Ijtema',
+        'date': 'June 20-22',
+        'description': 'Tablighi Ijtema is one of the largest Islamic congregations in the world, organized by the Tablighi Jamaat movement. Held annually in various countries big number of Muslims from around the globe for days of spiritual learning, prayers, and unity. The gathering focuses on strengthening faith, promoting Islamic teachings, and encouraging peaceful preaching (dawah) through personal reform and outreach. The event includes sermons by renowned scholars, collective prayers, and discussions on living an Islamic life according to the teachings of the Prophet Muhammad (PBUH). It emphasizes humility, simplicity, and a return to core Islamic values, drawing participants from all walks of life.',
+    },
+    {
+        'id': 3,
+        'type': 'event',
+        'icon': 'images/news_and_events/prayericon.png',
+        'title': 'Chicago Ijtema',
+        'date': 'June 27-29',
+        'description': 'Tablighi Ijtema is one of the largest Islamic congregations in the world, organized by the Tablighi Jamaat movement. Held annually in various countries big number of Muslims from around the globe for days of spiritual learning, prayers, and unity. The gathering focuses on strengthening faith, promoting Islamic teachings, and encouraging peaceful preaching (dawah) through personal reform and outreach. The event includes sermons by renowned scholars, collective prayers, and discussions on living an Islamic life according to the teachings of the Prophet Muhammad (PBUH). It emphasizes humility, simplicity, and a return to core Islamic values, drawing participants from all walks of life.',
+    },
+    // {
+    //     'id': 4,
+    //     'type': 'event',
+    //     'icon': 'images/news_and_events/islamiclectureicon.png',
+    //     'title': 'Islamic Lecture: Understanding Tawheed',
+    //     'date': '6/10/2025',
+    //     'description': 'Join us for an enlightening lecture on Tawheed by Imam Ahmed. Learn about the concept of the oneness of Allah and its significance in our faith.',
+    //     'time': '7:00 PM - 8:30 PM',
+    //     'location': 'Community Center, Al-Noor Mosque',
+    // },
+    // {
+    //     'id': 5,
+    //     'type': 'news',
+    //     'icon': 'images/news_and_events/fundraisericon.png',
+    //     'title': 'Building Fund Update',
+    //     'date': '6/15/2025',
+    //     'description': 'Alhamdulillah, we have raised 70% of our goal for the mosque expansion project. We are close to completing the new prayer hall. May Allah accept your donations.',
+    // },
+    // {
+    //     'id': 6,
+    //     'type': 'event',
+    //     'icon': 'images/news_and_events/quranclassicon.png',
+    //     'title': 'Quran Recitation Classes',
+    //     'date': '7/1/2025',
+    //     'description': 'Enroll your children in our Quran recitation classes. Classes are open for all ages, and the focus will be on memorization and proper Tajweed.',
+    //     'time': '10:00 AM - 12:00 PM',
+    //     'location': 'Education Wing, Al-Noor Mosque',
+    // }
+
+]

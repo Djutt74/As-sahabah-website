@@ -1,4 +1,6 @@
 import { services } from "./services.js";
+import { news_and_events } from "./news_and_events.js";
+
 
 document.addEventListener('DOMContentLoaded', function () {
     
@@ -59,13 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     maghribTime();
-    getiqamahtime();
+    setTimeout(getiqamahtime,500)
 
 
 
     // getservices
     const servicesDiv = document.getElementById('services-container');
-    let servicesDivContent = '<div id="service-list">';
+    let servicesDivContent = '<h1 class="container-headings">Services</h1><div id="service-list">';
 
     services.forEach(object => {
         servicesDivContent += '<div class="service-card">';
@@ -76,6 +78,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     servicesDivContent += '</div>';
     servicesDiv.innerHTML = servicesDivContent;
+
+
+    // getevents_and_news
+    const eventListDiv = document.getElementById('event-container');
+    let eventListDivContent = '<h2 class="container-headings">News and Upcoming Events</h2><div id="event-list">';
+
+    news_and_events.forEach(object => {
+        
+        if(object['type']== 'news'){
+            eventListDivContent += '<div class="news-card">';
+            eventListDivContent += `<img src="${object['image']}" alt="${object['title']} icon"><h3>${object['title']}</h3>`;
+        }
+        if(object['type']== 'event'){
+            eventListDivContent += '<div class="event-card">';
+            eventListDivContent += `<div class="card_heading_and_img"><h1 style="display:inline-block">${object['date']}</h1><h2 style="display:inline-block">${object['title']}</h2></div>`;
+        }
+
+        eventListDivContent += `<p>${object['description']}</p>`;
+        eventListDivContent += '</div>';
+    });
+    eventListDivContent += '</div>';
+    eventListDiv.innerHTML = eventListDivContent;
 
     
 

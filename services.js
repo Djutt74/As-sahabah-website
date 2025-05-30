@@ -31,9 +31,9 @@ export const services = [
   },
   {
     'id': 6,
-    'icon': 'images/hifzicon.png',
-    'title': 'Hifz Classes',
-    'description': 'Join our Hifz classes to memorize the Quran with expert guidance and support',
+    'icon': 'images/fatwaicon.png',
+    'title': 'Fatwa Services',
+    'description': 'Reach out to our qualified scholars for trusted Islamic guidance on personal, social, and religious matters.'
   },
 
 ]
